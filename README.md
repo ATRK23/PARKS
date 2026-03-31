@@ -3,4 +3,4 @@ une application permettant de faciliter la recherche et la réservation de place
 
 ## 📋 Suivi du projet
 
-👉 [Voir le Trello](https://trello.com/b/HIqGA0FM))
+👉 [Voir le Trello](https://trello.com/b/HIqGA0FM)
