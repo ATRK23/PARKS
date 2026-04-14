@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PARKS - Maquette Smart Parking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="brand-row">
+          <span class="brand-pill">PARKS</span>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Maquette produit</p>
+          <h1>PARKS.</h1>
+          <p class="hero-text">
+            Une vision rapide du service côté conducteur sur place, côté réservation web
+            et côté administration. Le but est de montrer l'expérience, pas de simuler
+            tout le produit.
+          </p>
+        </div>
+        <nav class="view-switcher" aria-label="Choix de parcours" role="tablist">
+          <button
+            class="view-tab active"
+            data-view="onsite"
+            type="button"
+            role="tab"
+            aria-selected="true"
+          >
+            Sur place
+          </button>
+          <button class="view-tab" data-view="online" type="button" role="tab" aria-selected="false">
+            Réservation web
+          </button>
+          <button class="view-tab" data-view="admin" type="button" role="tab" aria-selected="false">
+            Administration
+          </button>
+        </nav>
+      </header>
+
+      <main class="views">
+        <section class="view-panel active" data-view-panel="onsite" role="tabpanel">
+          <div class="panel-intro">
+            <div>
+              <p class="section-tag">Point de vue sur place</p>
+              <h2>Entrer dans le parking et payer sa place</h2>
+            </div>
+            <p>
+              L'utilisateur arrive, voit l'état du parking, obtient son accès et règle
+              rapidement son stationnement sans friction.
+            </p>
+          </div>
+
+          <div class="showcase-grid">
+            <article class="device-card gate-card">
+              <div class="device-topline">
+                <span class="signal" data-onsite-signal>Entrée Quai Nord</span>
+                <span class="light-dot green" data-onsite-light></span>
+              </div>
+              <div class="gate-layout">
+                <div class="gate-visual" data-onsite-gate>
+                  <div class="barrier" data-onsite-barrier></div>
+                  <div class="lane"></div>
+                </div>
+                <div class="gate-info">
+                  <p class="muted-label">Disponibilité immédiate</p>
+                  <h3 data-onsite-availability>42 places libres</h3>
+                  <p class="soft-text">
+                    Lecture plaque active, ticket numérique proposé, accès estimé en 12
+                    secondes.
+                  </p>
+                  <div class="chip-row">
+                    <span class="chip">CB / NFC</span>
+                    <span class="chip">QR invité</span>
+                    <span class="chip">Plaque reconnue</span>
+                  </div>
+                  <div class="mini-actions">
+                    <button class="primary-btn compact-action" type="button" data-onsite-enter>
+                      Simuler l'entrée
+                    </button>
+                    <button class="ghost-btn compact-action dark-ghost" type="button" data-onsite-reset>
+                      Réinitialiser
+                    </button>
+                  </div>
+                  <p class="inline-feedback" data-onsite-status>
+                    Barrière prête. Clique pour simuler l'arrivée d'un véhicule.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="device-card mobile-card">
+              <div class="phone-frame">
+                <div class="phone-header">
+                  <span>Session active</span>
+                  <span>15:24</span>
+                </div>
+                <div class="phone-main">
+                  <p class="muted-label" data-onsite-session-label>Place attribuée</p>
+                  <h3 data-onsite-slot>B-214</h3>
+                  <div class="ticket-block">
+                    <span>Temps écoulé</span>
+                    <strong data-onsite-time>01 h 40</strong>
+                  </div>
+                  <div class="payment-summary">
+                    <div>
+                      <span>Montant</span>
+                      <strong data-onsite-amount>4,80 €</strong>
+                    </div>
+                    <div>
+                      <span>Sortie estimée</span>
+                      <strong data-onsite-exit>17:00</strong>
+                    </div>
+                  </div>
+                  <div class="action-stack">
+                    <button class="primary-btn" type="button" data-onsite-pay>Payer maintenant</button>
+                    <button class="ghost-btn" type="button" data-onsite-extend>Prolonger de 30 min</button>
+                  </div>
+                  <p class="inline-feedback dark-feedback" data-onsite-payment-status>
+                    Session en cours. Paiement et prolongation disponibles.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-list">
+              <div class="feature-item">
+                <span class="feature-index">01</span>
+                <div>
+                  <h3>Décision instantanée</h3>
+                  <p>
+                    L'affichage montre tout de suite le nombre de places libres et les
+                    moyens d'accès disponibles.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-index">02</span>
+                <div>
+                  <h3>Parcours court</h3>
+                  <p>
+                    Le paiement se fait depuis la borne, le mobile ou directement via la
+                    plaque enregistrée.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-index">03</span>
+                <div>
+                  <h3>Sortie fluide</h3>
+                  <p>
+                    Ticket numérique, reçu immédiat et synchronisation avec le système de
+                    contrôle d'accès.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view-panel" data-view-panel="online" role="tabpanel" hidden>
+          <div class="panel-intro">
+            <div>
+              <p class="section-tag">Point de vue en ligne</p>
+              <h2>Réserver sa place en ligne avant d'arriver</h2>
+            </div>
+            <p>
+              Le conducteur anticipe, compare les options et verrouille une place avant
+              son trajet.
+            </p>
+          </div>
+
+          <div class="showcase-grid online-grid">
+            <article class="device-card search-card">
+              <div class="browser-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="search-hero">
+                <div>
+                  <p class="muted-label">Recherche destination</p>
+                  <h3>Centre-ville, Lyon</h3>
+                </div>
+                <button class="ghost-btn compact" type="button" data-online-filter>Filtres EV</button>
+              </div>
+              <p class="inline-feedback" data-online-filter-status>
+                Toutes les options sont visibles. Active un filtre pour simuler un affinage.
+              </p>
+              <button
+                class="parking-option featured is-selected"
+                type="button"
+                data-parking-option
+                data-name="PARKS République"
+                data-price="7,20 €"
+                data-place="A-118"
+                data-payment="Apple Pay"
+                data-time="Vendredi 18 avril · 18:30 → 22:00"
+                data-progress="72"
+                data-note="Le QR code et la plaque sont associés à la réservation pour une entrée plus rapide."
+              >
+                <div>
+                  <strong>PARKS République</strong>
+                  <p>3 min à pied · couvert · borne EV</p>
+                </div>
+                <span>7,20 €</span>
+              </button>
+              <button
+                class="parking-option"
+                type="button"
+                data-parking-option
+                data-name="PARKS Hôtel de Ville"
+                data-price="6,50 €"
+                data-place="C-041"
+                data-payment="Visa"
+                data-time="Vendredi 18 avril · 19:00 → 22:00"
+                data-progress="58"
+                data-note="Accès central et réservation plus économique avec entrée QR standard."
+              >
+                <div>
+                  <strong>PARKS Hôtel de Ville</strong>
+                  <p>5 min à pied · 12 places restantes</p>
+                </div>
+                <span>6,50 €</span>
+              </button>
+              <button
+                class="parking-option"
+                type="button"
+                data-parking-option
+                data-name="PARKS Opéra"
+                data-price="5,90 €"
+                data-place="D-212"
+                data-payment="Mastercard"
+                data-time="Vendredi 18 avril · 18:45 → 21:30"
+                data-progress="64"
+                data-note="Option la plus rapide à réserver, idéale pour une venue courte le soir."
+              >
+                <div>
+                  <strong>PARKS Opéra</strong>
+                  <p>7 min à pied · accès 24/7</p>
+                </div>
+                <span>5,90 €</span>
+              </button>
+            </article>
+
+            <article class="device-card reservation-card">
+              <div class="reservation-top">
+                <p class="muted-label" data-online-state-label>Réservation confirmée</p>
+                <span class="confirmation-badge" data-online-state-badge>QR prêt</span>
+              </div>
+              <h3 data-online-time>Vendredi 18 avril · 18:30 → 22:00</h3>
+              <div class="reservation-grid">
+                <div>
+                  <span>Parking</span>
+                  <strong data-online-name>République P2</strong>
+                </div>
+                <div>
+                  <span>Place</span>
+                  <strong data-online-place>A-118</strong>
+                </div>
+                <div>
+                  <span>Véhicule</span>
+                  <strong>AB-457-CD</strong>
+                </div>
+                <div>
+                  <span>Paiement</span>
+                  <strong data-online-payment>Apple Pay</strong>
+                </div>
+              </div>
+              <div class="progress-line">
+                <span style="width: 72%" data-online-progress></span>
+              </div>
+              <p class="soft-text" data-online-note>
+                Le QR code et la plaque sont associés à la réservation pour une entrée
+                plus rapide.
+              </p>
+              <div class="mini-actions">
+                <button class="primary-btn compact-action" type="button" data-online-book>
+                  Confirmer cette option
+                </button>
+                <span class="price-tag" data-online-price>7,20 €</span>
+              </div>
+            </article>
+
+            <article class="timeline-card">
+              <h3>Parcours digital</h3>
+              <div class="timeline-step">
+                <span>1</span>
+                <p>Choisir une zone, un créneau et le niveau de confort souhaité.</p>
+              </div>
+              <div class="timeline-step">
+                <span>2</span>
+                <p>Comparer le prix, la distance à pied et les services inclus.</p>
+              </div>
+              <div class="timeline-step">
+                <span>3</span>
+                <p>Recevoir la confirmation, le QR d'accès et le rappel avant arrivée.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view-panel" data-view-panel="admin" role="tabpanel" hidden>
+          <div class="panel-intro">
+            <div>
+              <p class="section-tag">Point de vue en tant qu'administrateur</p>
+              <h2>Piloter le service et gérer l'activité</h2>
+            </div>
+            <p>
+              L'administrateur suit l'occupation, les réservations, les revenus et les
+              alertes d'exploitation depuis un tableau de bord compact.
+            </p>
+          </div>
+
+          <div class="admin-layout">
+            <article class="admin-sidebar">
+              <div class="admin-brand">
+                <span class="brand-square"></span>
+                <div>
+                  <strong>PARKS Console</strong>
+                  <p>RBAC · temps réel</p>
+                </div>
+              </div>
+              <nav class="admin-nav">
+                <a href="#0" class="active">Dashboard</a>
+                <a href="#0">Parkings</a>
+                <a href="#0">Réservations</a>
+                <a href="#0">Utilisateurs</a>
+                <a href="#0">Paiements</a>
+                <a href="#0">Alertes IoT</a>
+              </nav>
+            </article>
+
+            <article class="admin-main">
+              <div class="admin-toolbar">
+                <button class="admin-mode-btn active" type="button" data-admin-mode="live">Live</button>
+                <button class="admin-mode-btn" type="button" data-admin-mode="rush">Heure de pointe</button>
+                <button class="admin-mode-btn" type="button" data-admin-mode="incident">Incident</button>
+              </div>
+              <div class="metric-grid">
+                <div class="metric-card accent">
+                  <span>Taux d'occupation</span>
+                  <strong data-admin-occupancy>81%</strong>
+                  <p data-admin-occupancy-note>+6% vs hier</p>
+                </div>
+                <div class="metric-card">
+                  <span>Réservations du jour</span>
+                  <strong data-admin-bookings>324</strong>
+                  <p data-admin-bookings-note>42 en attente d'arrivée</p>
+                </div>
+                <div class="metric-card">
+                  <span>Revenus</span>
+                  <strong data-admin-revenue>8 420 €</strong>
+                  <p data-admin-revenue-note>Paiements validés à 98,7%</p>
+                </div>
+              </div>
+
+              <div class="admin-content-grid">
+                <div class="chart-card">
+                  <div class="card-head">
+                    <h3>Occupation par site</h3>
+                    <span data-admin-badge>Live</span>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bar-row">
+                      <span>République</span>
+                      <div class="bar-track"><i style="width: 88%" data-admin-bar="0"></i></div>
+                      <strong data-admin-bar-label="0">88%</strong>
+                    </div>
+                    <div class="bar-row">
+                      <span>Opéra</span>
+                      <div class="bar-track"><i style="width: 73%" data-admin-bar="1"></i></div>
+                      <strong data-admin-bar-label="1">73%</strong>
+                    </div>
+                    <div class="bar-row">
+                      <span>Part-Dieu</span>
+                      <div class="bar-track"><i style="width: 91%" data-admin-bar="2"></i></div>
+                      <strong data-admin-bar-label="2">91%</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chart-card">
+                  <div class="card-head">
+                    <h3>Actions récentes</h3>
+                    <span data-admin-alerts>6 alertes</span>
+                  </div>
+                  <div class="activity-list" data-admin-activity-list>
+                    <div>
+                      <strong>Capteur P2-118 indisponible</strong>
+                      <p>Signal perdu depuis 4 min · priorité moyenne</p>
+                    </div>
+                    <div>
+                      <strong>Tarif soirée activé</strong>
+                      <p>Applicable sur 3 parkings jusqu'à 23:59</p>
+                    </div>
+                    <div>
+                      <strong>Demande de remboursement</strong>
+                      <p>Réservation #A-2041 à traiter avant 18:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
