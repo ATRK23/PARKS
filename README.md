@@ -1,17 +1,17 @@
-# 🚗 Smart Parking (PARKS)
+# Smart Parking (PARKS)
 
 voir la maquette : https://parkscgp.github.io/PARKS/
 
 ### Plateforme intelligente de gestion et réservation de stationnement urbain
 
-## 🧭 Overview
+##  Overview
 
 **PARKS** est une plateforme digitale permettant d’optimiser la gestion du stationnement en milieu urbain grâce à une combinaison de **données en temps réel**, **API REST**, et **technologies IoT**.
 
 Le projet s’inscrit dans une démarche de **Smart City**, visant à réduire la congestion, améliorer l’expérience utilisateur et maximiser l’utilisation des infrastructures de parking. 
 
 ---
-## 🎯 Vision produit
+##  Vision produit
 
 > Transformer la recherche de stationnement en une expérience fluide, prédictive et automatisée.
 
@@ -31,9 +31,9 @@ Le projet s’inscrit dans une démarche de **Smart City**, visant à réduire l
 
 ---
 
-## 🧩 Fonctionnalités clés
+##  Fonctionnalités clés
 
-### 👤 User App (Conducteurs)
+###  User App (Conducteurs)
 
 * Authentification sécurisée (JWT)
 * Recherche de parkings en temps réel
@@ -42,14 +42,14 @@ Le projet s’inscrit dans une démarche de **Smart City**, visant à réduire l
 * Historique & suivi des réservations
 * Notifications (confirmation, expiration, rappel)
 
-### 🛠️ Admin Dashboard (Gestionnaires)
+###  Admin Dashboard (Gestionnaires)
 
 * Gestion des parkings et des places
 * Suivi des réservations
 * Gestion des utilisateurs
 * Dashboard analytics (taux d’occupation, revenus, etc.)
 
-### ⚡ Fonctionnalités avancées
+###  Fonctionnalités avancées
 
 * Mise à jour temps réel (WebSockets / polling)
 * Intégration IoT (capteurs de présence)
@@ -58,7 +58,7 @@ Le projet s’inscrit dans une démarche de **Smart City**, visant à réduire l
 
 ---
 
-## 🏗️ Architecture système
+##  Architecture système
 
 Architecture **3-tier scalable** :
 
@@ -70,13 +70,13 @@ Architecture **3-tier scalable** :
 [ PostgreSQL Database ]
 ```
 
-### 🔹 Frontend
+###  Frontend
 
 * React (SPA)
 * Communication via API REST (JSON)
 * UX orientée temps réel
 
-### 🔹 Backend
+###  Backend
 
 * Java Spring Boot
 * Architecture RESTful
@@ -88,14 +88,14 @@ Architecture **3-tier scalable** :
   * Reservations
   * Payments
 
-### 🔹 Database
+### Database
 
 * PostgreSQL (relationnelle)
 * Modélisation normalisée
 
 ---
 
-## 🔐 Sécurité
+##  Sécurité
 
 * Authentification : JWT
 * Autorisation : RBAC (User / Admin)
@@ -104,7 +104,7 @@ Architecture **3-tier scalable** :
 
 ---
 
-## 🔄 Temps réel
+##  Temps réel
 
 Deux stratégies possibles :
 
@@ -118,7 +118,7 @@ Cas d’usage :
 
 ---
 
-## 🌐 IoT Integration (Optionnel)
+##  IoT Integration (Optionnel)
 
 * Capteurs détectant l’occupation des places
 * Transmission des données vers le backend
@@ -126,7 +126,7 @@ Cas d’usage :
 
 ---
 
-## 🧪 Stack technique
+##  Stack technique
 
 ### Frontend
 
@@ -148,67 +148,10 @@ Cas d’usage :
 * Git / GitHub
 * Trello (gestion projet)
 * Postman (tests API)
-* IntelliJ / Eclipse
 
 ---
 
-## 📦 Installation & Setup
-
-### 🔧 Prérequis
-
-* Node.js ≥ 16
-* Java JDK ≥ 17
-* Maven
-* PostgreSQL
-
----
-
-### 🚀 Setup
-
-```bash
-git clone https://github.com/your-org/smart-parking.git
-cd smart-parking
-```
-
-### ▶️ Backend
-
-```bash
-cd backend
-mvn clean install
-mvn spring-boot:run
-```
-
-### ▶️ Frontend
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
----
-
-## ⚙️ Configuration
-
-### Backend (`application.properties`)
-
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/smartparking
-spring.datasource.username=postgres
-spring.datasource.password=password
-
-jwt.secret=your_secret_key
-```
-
-### Frontend (`.env`)
-
-```env
-REACT_APP_API_URL=http://localhost:8080/api
-```
-
----
-
-## 🧱 Modélisation (Core Entities)
+##  Modélisation (Core Entities)
 
 * **User**
 * **Parking**
@@ -218,7 +161,7 @@ REACT_APP_API_URL=http://localhost:8080/api
 
 ---
 
-## 📊 Roadmap
+##  Roadmap
 
 ### Phase 1 – Core MVP
 
@@ -240,7 +183,7 @@ REACT_APP_API_URL=http://localhost:8080/api
 
 ---
 
-## 📈 KPI (indicateurs clés)
+##  KPI (indicateurs clés)
 
 * Taux d’occupation des parkings
 * Temps moyen de recherche
@@ -249,7 +192,7 @@ REACT_APP_API_URL=http://localhost:8080/api
 
 ---
 
-## 📁 Livrables
+##  Livrables
 
 * Application web (frontend + backend)
 * API REST documentée
@@ -260,7 +203,7 @@ REACT_APP_API_URL=http://localhost:8080/api
 
 ---
 
-## 🧑‍💼 Organisation projet
+##  Organisation projet
 
 ### Méthodologie
 
@@ -276,7 +219,7 @@ REACT_APP_API_URL=http://localhost:8080/api
 
 ---
 
-## 🔮 Perspectives d’évolution
+##  Perspectives d’évolution
 
 * Application mobile native (iOS / Android)
 * Intégration avec véhicules connectés
@@ -286,29 +229,19 @@ REACT_APP_API_URL=http://localhost:8080/api
 
 ---
 
-## 🤝 Contribution
-
-```bash
-git checkout -b feature/new-feature
-git commit -m "feat: add new feature"
-git push origin feature/new-feature
-```
-
----
-
-## 📄 Licence
+##  Licence
 
 Projet académique – usage pédagogique.
 
 ---
 
-## 📬 Contact
+##  Contact
 
 Projet réalisé dans le cadre du Master 1
 Conduite & Gestion de Projet
 
 ---
 
-## 📋 Suivi du projet
+##  Suivi du projet
 
-👉 [Voir le Trello](https://trello.com/b/HIqGA0FM)
+ [Voir le Trello](https://trello.com/b/HIqGA0FM)
